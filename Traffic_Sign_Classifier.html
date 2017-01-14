@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Traffic_Sign_Classifier</title><script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Traffic_Sign_Classifier</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -36900,7 +36900,7 @@ YII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <p>My neural network was trained on my PC with a Nvidia GTX 1080 card.</p>
-<p>In training the original training dataset, I used an <strong>adam optimizer with an initial learning rate of 0.0001</strong>, and the <strong>l2 loss decay factor is 1e-6</strong>. The weights are initalize with a stddev of 0.01. Since the GPU has 8G GDDR5 RAM, I set batch size as 256. Training epochs were 100, with a total time cost of about 10 minutes.</p>
+<p>In training the original training dataset, I used an <strong>adam optimizer with an initial learning rate of 0.0005</strong>, and the <strong>l2 loss decay factor is 1e-6</strong>. The weights are initalize with a stddev of 0.01. Since the GPU has 8G GDDR5 RAM, I set batch size as 256. Training epochs were 100, with a total time cost of about 10 minutes.</p>
 <p>I then fine tuned the best model with the augmented data. Since the augmented data samples increased, total training time was then about 26 minutes.</p>
 
 </div>
@@ -39056,7 +39056,7 @@ R0dHR0dHR0dHx42gGxsdHR0dHR0dHR0dHTeCbmx0dHR0dHR0dHR0dNwIurHR0dHR0dHR0dHR0XEj
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>In my first trivals, training dataset were not converted to grayscale, thus making the model also learn the color distribution of a sign. When testing on those signs but with different colors from the training dataset, the result went wrong.</p>
+<p>In my first trivals, training dataset were not converted to grayscale, thus making the model also learn the color distribution of a sign. When testing on those signs with similar shape but different colors from the training dataset, the result went wrong.</p>
 
 </div>
 </div>
@@ -39114,7 +39114,7 @@ Image 5: Road narrows on the right
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>The result just seems right, the accuracy is 100%.</p>
+<p>The predictions on captured pictures are correct, the accuracy is 100%, which seems better than that of testing dataset with a value of 97.17%, though the number of captured samples is just too few. Anyway, as long as captured pictures have similar features compared to training dataset, the predictions should be just fine.</p>
 
 </div>
 </div>
